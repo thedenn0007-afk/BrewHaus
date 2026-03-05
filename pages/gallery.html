@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery — BrewHaus Café</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📸</text></svg>" />
+  <style>
+    .filter-tabs { display:flex; gap:0.75rem; flex-wrap:wrap; margin:2.5rem 0 0; }
+    .filter-tab { padding:0.55rem 1.4rem; border-radius:50px; font-size:0.88rem; font-weight:600; cursor:pointer; border:2px solid var(--border); background:#fff; color:var(--mid); transition:all 0.2s; }
+    .filter-tab:hover, .filter-tab.active { background:var(--red); border-color:var(--red); color:#fff; }
+    .gallery-grid { grid-template-columns: repeat(4, 1fr); }
+  </style>
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+  <a href="../index.html" class="nav-logo">Brew<span>Haus</span></a>
+  <ul class="nav-links">
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="menu.html">Menu</a></li>
+    <li><a href="gallery.html" class="active">Gallery</a></li>
+    <li><a href="offers.html">Offers</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="menu.html" class="btn-order">Order Now</a></li>
+  </ul>
+  <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+</nav>
+
+<div class="page-hero">
+  <span class="section-label">Gallery</span>
+  <h1 class="section-title">Life at BrewHaus</h1>
+  <p class="section-sub">Food, ambience, and moments that make BrewHaus more than just a café.</p>
+</div>
+
+<section class="section" style="background:#fff;">
+  <div class="reveal">
+    <div class="filter-tabs">
+      <button class="filter-tab active" data-filter="all">All</button>
+      <button class="filter-tab" data-filter="food">🍔 Food</button>
+      <button class="filter-tab" data-filter="coffee">☕ Coffee</button>
+      <button class="filter-tab" data-filter="ambience">🏠 Ambience</button>
+      <button class="filter-tab" data-filter="events">🎉 Events</button>
+    </div>
+  </div>
+
+  <div class="gallery-grid" id="galleryGrid" style="margin-top:2rem;">
+    <div class="gallery-item wide tall reveal" data-filter="food">
+      <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=800&q=80" alt="Signature Burger" loading="lazy"/>
+      <div class="gallery-overlay"><span class="gallery-tag">🍔 Cheese Burst Burger</span></div>
+    </div>
+    <div class="gallery-item reveal" data-filter="coffee">
+      <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=500&q=80" alt="Latte Art" loading="lazy"/>
+      <div class="gallery-overlay"><span class="gallery-tag">☕ Latte Art</span></div>
+    </div>
+    <div class="gallery-item reveal" data-filter="ambience">
+      <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=500&q=80" alt="Café interior" loading="lazy"/>
+      <div class="gallery-overlay"><span class="gallery-tag">🏠 Our Space</span></div>
+    </div>
+    <div class="gallery-item reveal" data-filter="food">
+      <img src="https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?w=500&q=80" alt="Rose Pasta" loading="lazy"/>
+      <div class="gallery-overlay"><span class="gallery-tag">🍝 Rose Pasta</span></div>
+    </div>
+    <div class="gallery-item reveal" data-filter="coffee">
+      <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=500&q=80" alt="Cold Brew" loading="lazy"/>
+      <div class="gallery-overlay"><span class="gallery-tag">☕ Cold Brew</span></div>
+    </div>
+    <div class="gallery-item wide reveal" data-filter="ambience">
+      <img src="https://images.unsplash.com/photo-1600093463592-8e36ae95ef56?w=800&q=80" alt="Café vibes" loading="lazy"/>
+      <div class="gallery-overlay"><span class="gallery-tag">🏠 Koramangala Outlet</span></div>
+    </div>
+    <div class="gallery-item reveal" data-filter="food">
+      <img src="https://images.unsplash.com/photo-1565299585323-38d6b0865b47?w=500&q=80" alt="Nachos" loading="lazy"/>
+      <div class="gallery-overlay"><span class="gallery-tag">🌮 Loaded Nachos</span></div>
+    </div>
+    <div class="gallery-item reveal" data-filter="events">
+      <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=500&q=80" alt="Food spread" loading="lazy"/>
+      <div class="gallery-overlay"><span class="gallery-tag">🎉 Weekend Brunch</span></div>
+    </div>
+    <div class="gallery-item tall reveal" data-filter="coffee">
+      <img src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?w=500&q=80" alt="Mocha" loading="lazy"/>
+      <div class="gallery-overlay"><span class="gallery-tag">☕ Dark Mocha Frappe</span></div>
+    </div>
+    <div class="gallery-item reveal" data-filter="food">
+      <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?w=500&q=80" alt="Veg Burger" loading="lazy"/>
+      <div class="gallery-overlay"><span class="gallery-tag">🍔 Veg Supreme</span></div>
+    </div>
+    <div class="gallery-item reveal" data-filter="ambience">
+      <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=500&q=80" alt="Neon lights" loading="lazy"/>
+      <div class="gallery-overlay"><span class="gallery-tag">🏠 Night Vibes</span></div>
+    </div>
+    <div class="gallery-item wide reveal" data-filter="food">
+      <img src="https://images.unsplash.com/photo-1565299507177-b0ac66763828?w=800&q=80" alt="Tacos" loading="lazy"/>
+      <div class="gallery-overlay"><span class="gallery-tag">🌮 Crispy Tacos</span></div>
+    </div>
+    <div class="gallery-item reveal" data-filter="events">
+      <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=500&q=80" alt="Restaurant" loading="lazy"/>
+      <div class="gallery-overlay"><span class="gallery-tag">🎉 Date Night</span></div>
+    </div>
+    <div class="gallery-item reveal" data-filter="dessert">
+      <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?w=500&q=80" alt="Brownie" loading="lazy"/>
+      <div class="gallery-overlay"><span class="gallery-tag">🍫 Warm Brownie</span></div>
+    </div>
+    <div class="gallery-item reveal" data-filter="coffee">
+      <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=500&q=80" alt="Cappuccino" loading="lazy"/>
+      <div class="gallery-overlay"><span class="gallery-tag">☕ Cappuccino</span></div>
+    </div>
+    <div class="gallery-item reveal" data-filter="food">
+      <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?w=500&q=80" alt="Dessert" loading="lazy"/>
+      <div class="gallery-overlay"><span class="gallery-tag">🍫 Desserts</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- Instagram CTA -->
+<section class="section" style="background:var(--dark);color:#fff;text-align:center;padding:80px 5%;">
+  <div class="reveal">
+    <div style="font-size:3rem;margin-bottom:1rem;">📸</div>
+    <h2 class="section-title" style="color:#fff;">Share Your BrewHaus Moment</h2>
+    <p style="color:rgba(255,255,255,0.55);max-width:480px;margin:0.75rem auto 2rem;font-size:1rem;line-height:1.7;">Tag us on Instagram with <strong style="color:var(--orange);">#BrewHausDemo</strong> and your photo might appear on our wall!</p>
+    <a href="https://instagram.com/brewhauscafe.demo" class="btn-delivery" style="display:inline-flex;">📸 Follow @brewhauscafe.demo</a>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="../index.html" class="nav-logo">Brew<span style="color:#fff">Haus</span></a>
+      <p>Your neighbourhood urban café. Fresh food, specialty coffee, good vibes.</p>
+    </div>
+    <div class="footer-col"><h4>Menu</h4><ul><li><a href="menu.html">Burgers</a></li><li><a href="menu.html">Pasta</a></li><li><a href="menu.html">Coffee</a></li></ul></div>
+    <div class="footer-col"><h4>Visit</h4><ul><li><a href="contact.html">Locations</a></li><li><a href="contact.html">Book a Table</a></li></ul></div>
+    <div class="footer-col"><h4>Company</h4><ul>
+        <li><a href="#demo">About Us</a></li>
+        <li><a href="#demo">Careers</a></li></ul></div>
+  </div>
+  <div class="footer-bottom">
+    <p> 2024 BrewHaus Café. All rights reserved.</p>
+    <p>Made with </p>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+<script>
+// Gallery filter
+const filterTabs = document.querySelectorAll('.filter-tab');
+const galleryItems = document.querySelectorAll('.gallery-item[data-filter]');
+filterTabs.forEach(tab => {
+  tab.addEventListener('click', () => {
+    filterTabs.forEach(t => t.classList.remove('active'));
+    tab.classList.add('active');
+    const filter = tab.dataset.filter;
+    galleryItems.forEach(item => {
+      if (filter === 'all' || item.dataset.filter === filter) {
+        item.style.display = '';
+        item.style.animation = 'fadeIn 0.4s ease';
+      } else {
+        item.style.display = 'none';
+      }
+    });
+  });
+});
+</script>
+</body>
+</html>

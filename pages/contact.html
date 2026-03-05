@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact & Locations — BrewHaus Café</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📍</text></svg>" />
+  <style>
+    .outlets-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:1.5rem; margin-top:2.5rem; }
+    .outlet-card { background:#fff; border-radius:var(--r); padding:1.8rem; border:1px solid var(--border); transition:transform 0.25s,box-shadow 0.25s; }
+    .outlet-card:hover { transform:translateY(-4px); box-shadow:var(--shadow); }
+    .outlet-name { font-family:var(--font-h); font-size:1.15rem; font-weight:800; margin-bottom:0.25rem; }
+    .outlet-tag { display:inline-block; font-size:0.72rem; font-weight:700; padding:0.2rem 0.7rem; border-radius:50px; background:rgba(42,157,143,0.12); color:var(--green); margin-bottom:1rem; }
+    .outlet-tag.flagship { background:rgba(230,57,70,0.1); color:var(--red); }
+    .outlet-detail { display:flex; gap:0.6rem; align-items:flex-start; margin-bottom:0.7rem; font-size:0.88rem; color:var(--mid); }
+    .outlet-detail span:first-child { flex-shrink:0; margin-top:1px; }
+    .faq-item { border-bottom:1px solid var(--border); padding:1.2rem 0; cursor:pointer; }
+    .faq-q { font-family:var(--font-h); font-weight:700; font-size:0.95rem; display:flex; justify-content:space-between; align-items:center; gap:1rem; }
+    .faq-a { font-size:0.9rem; color:var(--muted); line-height:1.7; max-height:0; overflow:hidden; transition:max-height 0.3s,margin-top 0.3s; }
+    .faq-item.open .faq-a { max-height:200px; margin-top:0.75rem; }
+    .faq-arrow { font-size:0.8rem; transition:transform 0.3s; }
+    .faq-item.open .faq-arrow { transform:rotate(90deg); }
+    .contact-methods { display:grid; grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); gap:1.2rem; margin-top:2.5rem; }
+    .contact-method { background:var(--cream); border-radius:var(--r); padding:1.5rem; border:1px solid var(--border); text-align:center; }
+    .cm-icon { font-size:2rem; margin-bottom:0.75rem; }
+    .cm-title { font-family:var(--font-h); font-weight:700; font-size:0.95rem; margin-bottom:0.3rem; }
+    .cm-val { font-size:0.88rem; color:var(--muted); }
+    .cm-val a { color:var(--red); font-weight:600; }
+  </style>
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+  <a href="../index.html" class="nav-logo">Brew<span>Haus</span></a>
+  <ul class="nav-links">
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="menu.html">Menu</a></li>
+    <li><a href="gallery.html">Gallery</a></li>
+    <li><a href="offers.html">Offers</a></li>
+    <li><a href="contact.html" class="active">Contact</a></li>
+    <li><a href="menu.html" class="btn-order">Order Now</a></li>
+  </ul>
+  <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+</nav>
+
+<div class="page-hero">
+  <span class="section-label">Contact & Visit</span>
+  <h1 class="section-title">We'd Love to See You</h1>
+  <p class="section-sub">Four outlets across the city. Book a table, drop us a message, or just walk in.</p>
+</div>
+
+<!-- Contact Methods -->
+<section class="section" style="background:#fff;padding-bottom:40px;">
+  <div class="contact-methods reveal">
+    <div class="contact-method">
+      <div class="cm-icon">📞</div>
+      <div class="cm-title">Call Us</div>
+      <div class="cm-val"><a href="tel:+910000000000">+91 00000 00000</a></div>
+    </div>
+    <div class="contact-method">
+      <div class="cm-icon">📧</div>
+      <div class="cm-title">Email</div>
+      <div class="cm-val"><a href="mailto:hello@brewhaus.demo">hello@brewhaus.demo</a></div>
+    </div>
+    <div class="contact-method">
+      <div class="cm-icon">📸</div>
+      <div class="cm-title">Instagram</div>
+      <div class="cm-val"><a href="https://instagram.com/brewhauscafe.demo">@brewhauscafe.demo</a></div>
+    </div>
+    <div class="contact-method">
+      <div class="cm-icon">⏰</div>
+      <div class="cm-title">Opening Hours</div>
+      <div class="cm-val">Mon–Fri: 8 AM–11 PM<br>Sat–Sun: 8 AM–12 AM</div>
+    </div>
+  </div>
+</section>
+
+<!-- Book a Table + Message -->
+<section class="section contact-grid" style="background:#fff;padding-top:40px;">
+  <!-- Reservation Form -->
+  <div class="reveal">
+    <span class="section-label">Reservations</span>
+    <h2 class="section-title" style="margin-bottom:0.5rem;">Book a Table</h2>
+    <p style="font-size:0.95rem;color:var(--muted);margin-bottom:2rem;">Reserve your spot and we'll have it ready for you. Confirmations sent via SMS.</p>
+
+    <form id="resForm">
+      <div class="form-row">
+        <div class="form-group">
+          <label>Full Name</label>
+          <input type="text" placeholder="Arjun Mehta" required />
+        </div>
+        <div class="form-group">
+          <label>Phone Number</label>
+          <input type="tel" placeholder="+91 00000 00000" required />
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label>Date</label>
+          <input type="date" required />
+        </div>
+        <div class="form-group">
+          <label>Time</label>
+          <input type="time" required />
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label>Number of Guests</label>
+          <select>
+            <option>1 Person</option>
+            <option selected>2 People</option>
+            <option>3–4 People</option>
+            <option>5–6 People</option>
+            <option>7+ People</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Outlet</label>
+          <select>
+            <option>Koramangala (Flagship)</option>
+            <option>Indiranagar</option>
+            <option>HSR Layout</option>
+            <option>Whitefield</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Special Requests (Optional)</label>
+        <textarea placeholder="Birthday celebration, dietary restrictions, preferred seating…"></textarea>
+      </div>
+      <button type="submit" class="btn-primary" style="width:100%;justify-content:center;">🪑 Reserve My Table</button>
+    </form>
+  </div>
+
+  <!-- Contact Form -->
+  <div class="reveal">
+    <span class="section-label">Get in Touch</span>
+    <h2 class="section-title" style="margin-bottom:0.5rem;">Send a Message</h2>
+    <p style="font-size:0.95rem;color:var(--muted);margin-bottom:2rem;">Feedback, catering enquiries, franchise info — we read every message.</p>
+
+    <form id="contactForm">
+      <div class="form-row">
+        <div class="form-group">
+          <label>Your Name</label>
+          <input type="text" placeholder="Priya Nair" required />
+        </div>
+        <div class="form-group">
+          <label>Email Address</label>
+          <input type="email" placeholder="your@email.demo" required />
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Subject</label>
+        <select>
+          <option>General Enquiry</option>
+          <option>Feedback / Complaint</option>
+          <option>Catering / Events</option>
+          <option>Franchise Enquiry</option>
+          <option>Media / Press</option>
+          <option>Career Opportunities</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Message</label>
+        <textarea placeholder="Tell us what's on your mind…" style="min-height:160px;" required></textarea>
+      </div>
+      <button type="submit" class="btn-primary" style="width:100%;justify-content:center;">✉️ Send Message</button>
+    </form>
+
+    <!-- Social links -->
+    <div style="margin-top:2rem;padding:1.5rem;background:var(--cream);border-radius:var(--r);border:1px solid var(--border);">
+      <div style="font-family:var(--font-h);font-weight:700;margin-bottom:0.75rem;">Also find us on</div>
+      <div style="display:flex;gap:0.75rem;flex-wrap:wrap;">
+        <a href="https://zomato.com/demo-brewhaus" style="display:inline-flex;align-items:center;gap:0.5rem;background:#fff;border:1px solid var(--border);padding:0.5rem 1rem;border-radius:50px;font-size:0.85rem;font-weight:600;transition:box-shadow 0.2s;" onmouseover="this.style.boxShadow='0 4px 12px rgba(0,0,0,0.1)'" onmouseout="this.style.boxShadow=''">🍽️ Zomato</a>
+        <a href="https://swiggy.com/demo-brewhaus" style="display:inline-flex;align-items:center;gap:0.5rem;background:#fff;border:1px solid var(--border);padding:0.5rem 1rem;border-radius:50px;font-size:0.85rem;font-weight:600;transition:box-shadow 0.2s;" onmouseover="this.style.boxShadow='0 4px 12px rgba(0,0,0,0.1)'" onmouseout="this.style.boxShadow=''">🛵 Swiggy</a>
+        <a href="https://instagram.com/brewhauscafe.demo" style="display:inline-flex;align-items:center;gap:0.5rem;background:#fff;border:1px solid var(--border);padding:0.5rem 1rem;border-radius:50px;font-size:0.85rem;font-weight:600;transition:box-shadow 0.2s;" onmouseover="this.style.boxShadow='0 4px 12px rgba(0,0,0,0.1)'" onmouseout="this.style.boxShadow=''">📸 Instagram</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Our Locations -->
+<section class="section" style="background:var(--cream);">
+  <div class="reveal">
+    <span class="section-label">Our Outlets</span>
+    <h2 class="section-title">Four Locations, One Experience</h2>
+  </div>
+  <div class="outlets-grid">
+    <div class="outlet-card reveal">
+      <div class="outlet-name">Koramangala</div>
+      <span class="outlet-tag flagship">★ Flagship</span>
+      <div class="outlet-detail"><span>📍</span><span>Koramangala 12, Demo Street, 5th Block · 000095</span></div>
+      <div class="outlet-detail"><span>📞</span><span>+91 00000 00000</span></div>
+      <div class="outlet-detail"><span>⏰</span><span>Mon–Fri 8 AM–11 PM · Sat–Sun 8 AM–12 AM</span></div>
+      <div class="outlet-detail"><span>🅿️</span><span>Basement parking available</span></div>
+      <div class="outlet-detail"><span>🪑</span><span>Seats 80 · Private dining room for 20</span></div>
+    </div>
+    <div class="outlet-card reveal">
+      <div class="outlet-name">Indiranagar</div>
+      <span class="outlet-tag">2nd Outlet</span>
+      <div class="outlet-detail"><span>📍</span><span>Indiranagar 34, Sample Road · 000038</span></div>
+      <div class="outlet-detail"><span>📞</span><span>+91 00000 00001</span></div>
+      <div class="outlet-detail"><span>⏰</span><span>Mon–Fri 8 AM–11 PM · Sat–Sun 8 AM–12 AM</span></div>
+      <div class="outlet-detail"><span>🪑</span><span>Seats 60 · Outdoor terrace seating</span></div>
+    </div>
+    <div class="outlet-card reveal">
+      <div class="outlet-name">HSR Layout</div>
+      <span class="outlet-tag">3rd Outlet</span>
+      <div class="outlet-detail"><span>📍</span><span>HSR Layout 7, Placeholder Lane · 000102</span></div>
+      <div class="outlet-detail"><span>📞</span><span>+91 00000 00002</span></div>
+      <div class="outlet-detail"><span>⏰</span><span>Mon–Sat 9 AM–11 PM · Sun 9 AM–10 PM</span></div>
+      <div class="outlet-detail"><span>🪑</span><span>Seats 50 · Dog-friendly patio</span></div>
+    </div>
+    <div class="outlet-card reveal">
+      <div class="outlet-name">Whitefield</div>
+      <span class="outlet-tag">Newest</span>
+      <div class="outlet-detail"><span>📍</span><span>Whitefield Plot 23, Demo Zone · 000066</span></div>
+      <div class="outlet-detail"><span>📞</span><span>+91 00000 00003</span></div>
+      <div class="outlet-detail"><span>⏰</span><span>Mon–Fri 7 AM–10 PM · Sat–Sun 8 AM–11 PM</span></div>
+      <div class="outlet-detail"><span>🪑</span><span>Seats 70 · Corporate lunch packages</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section" style="background:#fff;">
+  <div class="reveal">
+    <span class="section-label">FAQ</span>
+    <h2 class="section-title">Frequently Asked Questions</h2>
+  </div>
+  <div style="max-width:680px;margin-top:2.5rem;" class="reveal">
+    <div class="faq-item">
+      <div class="faq-q">Do I need to book a table in advance? <span class="faq-arrow">›</span></div>
+      <div class="faq-a">Walk-ins are always welcome, but we recommend booking on weekends and public holidays as tables fill up fast. Reservations can be made through this form or by calling us directly.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Do you have vegan or gluten-free options? <span class="faq-arrow">›</span></div>
+      <div class="faq-a">Yes! We have a dedicated veg and vegan-friendly section on the menu. Please inform your server of any allergies or dietary restrictions and we'll do our best to accommodate you.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Is BrewHaus available for corporate or event catering? <span class="faq-arrow">›</span></div>
+      <div class="faq-a">Absolutely. We offer catering packages for corporate lunches, birthday parties, and private events. Contact us via email at events@brewhaus.demo or use the form above for details and pricing.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Can I use multiple discount codes at once? <span class="faq-arrow">›</span></div>
+      <div class="faq-a">Generally, only one discount code can be applied per bill. However, the Student Discount and Happy Hour offer can be stacked for eligible customers between 3–5 PM on weekdays.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Do you offer franchise opportunities? <span class="faq-arrow">›</span></div>
+      <div class="faq-a">Yes! We're actively looking to expand across India. Send your details and city of interest to franchise@brewhaus.demo and our team will get back to you within 5 business days.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Is there free Wi-Fi at all outlets? <span class="faq-arrow">›</span></div>
+      <div class="faq-a">Yes, all four BrewHaus outlets offer complimentary high-speed Wi-Fi. The password is available on your receipt or you can ask our staff. No time limit — work as long as you like!</div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="../index.html" class="nav-logo">Brew<span style="color:#fff">Haus</span></a>
+      <p>Your neighbourhood urban café. Fresh food, specialty coffee, good vibes.</p>
+      <div class="footer-social">
+        <div class="social-btn">📸</div><div class="social-btn">📘</div><div class="social-btn">🐦</div>
+      </div>
+    </div>
+    <div class="footer-col"><h4>Menu</h4><ul><li><a href="menu.html">Burgers</a></li><li><a href="menu.html">Pasta</a></li><li><a href="menu.html">Coffee</a></li></ul></div>
+    <div class="footer-col"><h4>Visit</h4><ul><li><a href="contact.html">Locations</a></li><li><a href="contact.html">Book a Table</a></li><li><a href="offers.html">Offers</a></li></ul></div>
+    <div class="footer-col"><h4>Company</h4><ul><li><a href="#demo">About Us</a></li><li><a href="#demo">Careers</a></li><li><a href="#demo">Franchise</a></li><li><a href="#demo">Privacy Policy</a></li></ul></div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2024 BrewHaus Café. All rights reserved.</p>
+    <p>Made with ❤️</p>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+<script>
+document.querySelectorAll('.faq-item').forEach(item => {
+  item.addEventListener('click', () => {
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+    if (!isOpen) item.classList.add('open');
+  });
+});
+</script>
+</body>
+</html>

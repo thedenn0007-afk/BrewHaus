@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BrewHaus Café — Good Food. Great Coffee.</title>
+  <meta name="description" content="BrewHaus is your urban café serving gourmet burgers, pasta, Tex-Mex and specialty coffee in the heart of the city." />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>☕</text></svg>" />
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar" id="navbar">
+  <a href="index.html" class="nav-logo">Brew<span>Haus</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html" class="active">Home</a></li>
+    <li><a href="pages/menu.html">Menu</a></li>
+    <li><a href="pages/gallery.html">Gallery</a></li>
+    <li><a href="pages/offers.html">Offers</a></li>
+    <li><a href="pages/contact.html">Contact</a></li>
+    <li><a href="pages/menu.html" class="btn-order">Order Now</a></li>
+  </ul>
+  <div class="hamburger" id="hamburger">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-badge">
+      <span class="dot"></span> Now open in Koramangala & Indiranagar
+    </div>
+    <h1 class="hero-title">
+      Good Food.<br>
+      <span class="accent">Great Coffee.</span><br>
+      <span class="accent-o">Better Vibes.</span>
+    </h1>
+    <p class="hero-desc">Urban café serving gourmet burgers, handcrafted pasta, Tex-Mex bites and specialty brews. Your neighbourhood's favourite hangout.</p>
+    <div class="hero-actions">
+      <a href="pages/menu.html" class="btn-primary">🍔 Explore Menu</a>
+      <a href="pages/contact.html" class="btn-outline">📍 Find Us</a>
+    </div>
+    <div class="hero-stats">
+      <div>
+        <div class="stat-num" data-target="10000" data-suffix="+">0+</div>
+        <div class="stat-label">Happy Customers</div>
+      </div>
+      <div>
+        <div class="stat-num" data-target="48" data-suffix="+">0+</div>
+        <div class="stat-label">Menu Items</div>
+      </div>
+      <div>
+        <div class="stat-num" data-target="4" data-suffix=" Outlets">0 Outlets</div>
+        <div class="stat-label">Locations</div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-visual">
+    <div class="hero-img-wrap">
+      <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=700&q=80" alt="Gourmet Burger" loading="eager" />
+      <div class="hero-float-card">
+        <span class="emoji">⭐</span>
+        <div class="float-text">
+          <strong>4.8 / 5 Rating</strong><br>
+          <span>2,400+ reviews on Zomato</span>
+        </div>
+      </div>
+      <div class="hero-tag">
+        🔥 Trending<br>This Week
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- POPULAR MENU -->
+<section class="section" style="background:#fff;">
+  <div class="reveal">
+    <span class="section-label">Our Favourites</span>
+    <h2 class="section-title">What's Hot Right Now</h2>
+    <p class="section-sub">Crowd-pleasers loved by our regulars. Fresh, flavourful, made to order.</p>
+  </div>
+  <div class="cat-tabs reveal" style="margin-top:2rem;">
+    <button class="cat-tab active" data-cat="all">All</button>
+    <button class="cat-tab" data-cat="burger">🍔 Burgers</button>
+    <button class="cat-tab" data-cat="pasta">🍝 Pasta</button>
+    <button class="cat-tab" data-cat="texmex">🌮 Tex-Mex</button>
+    <button class="cat-tab" data-cat="drinks">☕ Drinks</button>
+  </div>
+  <div class="menu-grid">
+    <div class="menu-card reveal" data-cat="burger">
+      <div class="card-img">
+        <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=500&q=80" alt="Cheese Burst Burger" loading="lazy" />
+        <span class="card-badge">🔥 Bestseller</span>
+      </div>
+      <div class="card-body">
+        <div class="card-name">Cheese Burst Burger</div>
+        <div class="card-desc">Crispy chicken, oozing cheddar, smoky BBQ sauce on a toasted brioche bun.</div>
+        <div class="card-footer">
+          <span class="card-price">₹249</span>
+          <button class="card-add" title="Add to cart">+</button>
+        </div>
+      </div>
+    </div>
+    <div class="menu-card reveal" data-cat="pasta">
+      <div class="card-img">
+        <img src="https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?w=500&q=80" alt="Rose Pasta" loading="lazy" />
+        <span class="card-badge veg">🌿 Veg</span>
+      </div>
+      <div class="card-body">
+        <div class="card-name">Creamy Rose Pasta</div>
+        <div class="card-desc">Penne tossed in a velvety tomato-cream sauce with fresh basil and parmesan.</div>
+        <div class="card-footer">
+          <span class="card-price">₹219</span>
+          <button class="card-add" title="Add to cart">+</button>
+        </div>
+      </div>
+    </div>
+    <div class="menu-card reveal" data-cat="texmex">
+      <div class="card-img">
+        <img src="https://images.unsplash.com/photo-1565299585323-38d6b0865b47?w=500&q=80" alt="Loaded Nachos" loading="lazy" />
+        <span class="card-badge veg">🌿 Veg</span>
+      </div>
+      <div class="card-body">
+        <div class="card-name">Loaded Nachos</div>
+        <div class="card-desc">Crispy chips piled with salsa, sour cream, jalapeños and nacho cheese sauce.</div>
+        <div class="card-footer">
+          <span class="card-price">₹199</span>
+          <button class="card-add" title="Add to cart">+</button>
+        </div>
+      </div>
+    </div>
+    <div class="menu-card reveal" data-cat="drinks">
+      <div class="card-img">
+        <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=500&q=80" alt="Cold Brew" loading="lazy" />
+        <span class="card-badge" style="background:#6b4226;">☕ Coffee</span>
+      </div>
+      <div class="card-body">
+        <div class="card-name">Signature Cold Brew</div>
+        <div class="card-desc">12-hour steeped single-origin cold brew topped with salted caramel foam.</div>
+        <div class="card-footer">
+          <span class="card-price">₹179</span>
+          <button class="card-add" title="Add to cart">+</button>
+        </div>
+      </div>
+    </div>
+    <div class="menu-card reveal" data-cat="burger">
+      <div class="card-img">
+        <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?w=500&q=80" alt="Veg Supreme" loading="lazy" />
+        <span class="card-badge veg">🌿 Veg</span>
+      </div>
+      <div class="card-body">
+        <div class="card-name">Veg Supreme Burger</div>
+        <div class="card-desc">Crunchy veg patty, fresh lettuce, tangy jalapeño mayo, double cheese.</div>
+        <div class="card-footer">
+          <span class="card-price">₹199</span>
+          <button class="card-add" title="Add to cart">+</button>
+        </div>
+      </div>
+    </div>
+    <div class="menu-card reveal" data-cat="texmex">
+      <div class="card-img">
+        <img src="https://images.unsplash.com/photo-1565299507177-b0ac66763828?w=500&q=80" alt="Chicken Tacos" loading="lazy" />
+      </div>
+      <div class="card-body">
+        <div class="card-name">Crispy Chicken Tacos</div>
+        <div class="card-desc">Street-style soft tacos with chipotle chicken, avocado, pico de gallo.</div>
+        <div class="card-footer">
+          <span class="card-price">₹229</span>
+          <button class="card-add" title="Add to cart">+</button>
+        </div>
+      </div>
+    </div>
+    <div class="menu-card reveal" data-cat="drinks">
+      <div class="card-img">
+        <img src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?w=500&q=80" alt="Mocha Frappe" loading="lazy" />
+        <span class="card-badge" style="background:#6b4226;">☕ Coffee</span>
+      </div>
+      <div class="card-body">
+        <div class="card-name">Dark Mocha Frappe</div>
+        <div class="card-desc">Blended espresso with dark chocolate, topped with whipped cream and cocoa dust.</div>
+        <div class="card-footer">
+          <span class="card-price">₹189</span>
+          <button class="card-add" title="Add to cart">+</button>
+        </div>
+      </div>
+    </div>
+    <div class="menu-card reveal" data-cat="pasta">
+      <div class="card-img">
+        <img src="https://images.unsplash.com/photo-1555949258-eb67b1ef0ceb?w=500&q=80" alt="Chicken Alfredo" loading="lazy" />
+      </div>
+      <div class="card-body">
+        <div class="card-name">Chicken Alfredo</div>
+        <div class="card-desc">Grilled chicken strips in rich Alfredo sauce with fettuccine and garlic bread.</div>
+        <div class="card-footer">
+          <span class="card-price">₹279</span>
+          <button class="card-add" title="Add to cart">+</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div style="text-align:center;margin-top:3rem;">
+    <a href="pages/menu.html" class="btn-primary reveal">View Full Menu →</a>
+  </div>
+</section>
+
+<!-- ABOUT / AMBIENCE -->
+<section class="section about-grid">
+  <div class="about-imgs reveal">
+    <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=500&q=80" alt="Café interior" />
+    <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=400&q=80" alt="Latte art" />
+    <img src="https://images.unsplash.com/photo-1600093463592-8e36ae95ef56?w=400&q=80" alt="Café vibes" />
+  </div>
+  <div class="reveal">
+    <span class="section-label">Our Story</span>
+    <h2 class="section-title">A Café Built for Real Moments</h2>
+    <p class="section-sub">BrewHaus was born from a simple idea — that great food and honest coffee can turn a regular afternoon into a memory. We're a cosy urban escape where every bite is crafted with care.</p>
+    <div class="about-features">
+      <div class="about-feat">
+        <div class="feat-icon">🌾</div>
+        <div class="feat-title">Fresh Ingredients</div>
+        <div class="feat-desc">Locally sourced, never frozen.</div>
+      </div>
+      <div class="about-feat">
+        <div class="feat-icon">☕</div>
+        <div class="feat-title">Specialty Coffee</div>
+        <div class="feat-desc">Single-origin beans, roasted in-house.</div>
+      </div>
+      <div class="about-feat">
+        <div class="feat-icon">🌿</div>
+        <div class="feat-title">Veg Friendly</div>
+        <div class="feat-desc">40+ vegetarian options on the menu.</div>
+      </div>
+      <div class="about-feat">
+        <div class="feat-icon">📶</div>
+        <div class="feat-title">Free High-Speed Wi-Fi</div>
+        <div class="feat-desc">Work or chill, we've got you covered.</div>
+      </div>
+    </div>
+    <div style="margin-top:2rem;">
+      <a href="pages/gallery.html" class="btn-outline">See Gallery</a>
+    </div>
+  </div>
+</section>
+
+<!-- OFFERS TEASER -->
+<section class="section offers-section">
+  <div class="reveal">
+    <span class="section-label" style="color:var(--orange);background:rgba(244,162,97,0.15);">Limited Time</span>
+    <h2 class="section-title">Today's Best Deals</h2>
+    <p class="section-sub">Stack savings on your favourite items — because great food should be affordable too.</p>
+  </div>
+  <div class="offers-grid">
+    <div class="offer-card reveal">
+      <div class="offer-emoji">🍔</div>
+      <div class="offer-title">Buy 1 Get 1 Burger</div>
+      <div class="offer-desc">Every Tuesday, pick any burger and get the second one absolutely free. Dine-in only.</div>
+      <span class="offer-tag">Tuesdays</span>
+    </div>
+    <div class="offer-card reveal">
+      <div class="offer-emoji">☕</div>
+      <div class="offer-title">Coffee Happy Hour</div>
+      <div class="offer-desc">All specialty coffees at 30% off between 3–5 PM on weekdays. Show student ID for an extra 10%.</div>
+      <span class="offer-tag">3 PM – 5 PM</span>
+    </div>
+    <div class="offer-card reveal">
+      <div class="offer-emoji">🎓</div>
+      <div class="offer-title">Student Discount</div>
+      <div class="offer-desc">Flash your college ID and grab 20% off your entire bill, valid all week long, no minimum order.</div>
+      <span class="offer-tag">Always On</span>
+    </div>
+    <div class="offer-card reveal">
+      <div class="offer-emoji">🍝</div>
+      <div class="offer-title">Pasta + Drink Combo</div>
+      <div class="offer-desc">Any pasta dish paired with any cold coffee or mocktail for just ₹349. Weekend special.</div>
+      <span class="offer-tag">Weekends</span>
+    </div>
+  </div>
+  <div style="text-align:center;margin-top:3rem;">
+    <a href="pages/offers.html" class="btn-primary reveal" style="background:var(--orange);">View All Offers →</a>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="section testimonials-section">
+  <div class="reveal" style="text-align:center;margin-bottom:0;">
+    <span class="section-label">Reviews</span>
+    <h2 class="section-title">What Our Guests Say</h2>
+    <p class="section-sub" style="margin:0.75rem auto 0;">Real opinions from real people who love real food.</p>
+  </div>
+  <div class="test-grid">
+    <div class="test-card reveal">
+      <div class="test-stars">★★★★★</div>
+      <p class="test-text">"Best cheese burst burger I've had in the city. The cold brew is addictive. Already on my third visit this week!"</p>
+      <div class="test-author">
+        <div class="test-avatar">A</div>
+        <div>
+          <div class="test-name">Arjun Mehta</div>
+          <div class="test-role">Software Engineer · Koramangala</div>
+        </div>
+      </div>
+    </div>
+    <div class="test-card reveal">
+      <div class="test-stars">★★★★★</div>
+      <p class="test-text">"The ambience is so Instagram-worthy. Came for the food, stayed for the vibes. The rose pasta was divine!"</p>
+      <div class="test-author">
+        <div class="test-avatar" style="background:var(--red);">P</div>
+        <div>
+          <div class="test-name">Priya Nair</div>
+          <div class="test-role">Content Creator · Indiranagar</div>
+        </div>
+      </div>
+    </div>
+    <div class="test-card reveal">
+      <div class="test-stars">★★★★☆</div>
+      <p class="test-text">"Great student-friendly prices and FAST Wi-Fi. Perfect spot to get work done between classes. Love the Happy Hour."</p>
+      <div class="test-author">
+        <div class="test-avatar" style="background:var(--green);">R</div>
+        <div>
+          <div class="test-name">Rahul D.</div>
+          <div class="test-role">College Student · HSR Layout</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ORDER ONLINE -->
+<section class="section order-section">
+  <div class="reveal">
+    <span class="section-label" style="color:#fff;background:rgba(255,255,255,0.2);">Order Online</span>
+    <h2 class="section-title">Craving Something?</h2>
+    <p class="section-sub">Get BrewHaus delivered to your door in under 30 minutes. Available on Zomato and Swiggy.</p>
+    <div class="order-btns">
+      <a href="https://zomato.com/demo-brewhaus" class="btn-delivery" title="Order on Zomato">
+        <span style="font-size:1.2rem;">🍽️</span> Order on Zomato
+      </a>
+      <a href="https://swiggy.com/demo-brewhaus" class="btn-delivery" title="Order on Swiggy">
+        <span style="font-size:1.2rem;">🛵</span> Order on Swiggy
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- LOCATION TEASER -->
+<section class="section location-grid">
+  <div class="reveal">
+    <span class="section-label">Find Us</span>
+    <h2 class="section-title">Come Visit Us</h2>
+    <p class="section-sub">Four cosy outlets across the city, open seven days a week.</p>
+    <div class="location-info">
+      <div class="loc-item">
+        <div class="loc-icon">📍</div>
+        <div>
+          <div class="loc-label">Main Branch</div>
+          <div class="loc-val">Koramangala 12, Demo Street, 5th Block · 000095</div>
+        </div>
+      </div>
+      <div class="loc-item">
+        <div class="loc-icon">⏰</div>
+        <div>
+          <div class="loc-label">Hours</div>
+          <div class="loc-val">Mon–Fri: 8 AM – 11 PM &nbsp;|&nbsp; Sat–Sun: 8 AM – 12 AM</div>
+        </div>
+      </div>
+      <div class="loc-item">
+        <div class="loc-icon">📞</div>
+        <div>
+          <div class="loc-label">Reservations</div>
+          <div class="loc-val">+91 00000 00000</div>
+        </div>
+      </div>
+    </div>
+    <div style="margin-top:2rem;display:flex;gap:1rem;flex-wrap:wrap;">
+      <a href="pages/contact.html" class="btn-primary">Book a Table</a>
+      <a href="pages/contact.html" class="btn-outline">All Locations</a>
+    </div>
+  </div>
+  <div class="reveal">
+    <div class="map-placeholder">
+      <span>🗺️</span>
+      <span class="map-label">Koramangala · Indiranagar<br>HSR Layout · Whitefield</span>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="index.html" class="nav-logo">Brew<span style="color:#fff">Haus</span></a>
+      <p>Your neighbourhood urban café serving gourmet burgers, specialty coffees, pasta and Tex-Mex bites since 2019.</p>
+      <div class="footer-social">
+        <div class="social-btn" title="Instagram">📸</div>
+        <div class="social-btn" title="Facebook">📘</div>
+        <div class="social-btn" title="Twitter">🐦</div>
+        <div class="social-btn" title="YouTube">▶️</div>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Menu</h4>
+      <ul>
+        <li><a href="pages/menu.html">Burgers</a></li>
+        <li><a href="pages/menu.html">Pasta</a></li>
+        <li><a href="pages/menu.html">Tex-Mex</a></li>
+        <li><a href="pages/menu.html">Coffee</a></li>
+        <li><a href="pages/menu.html">Desserts</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Visit</h4>
+      <ul>
+        <li><a href="pages/contact.html">Locations</a></li>
+        <li><a href="pages/contact.html">Book a Table</a></li>
+        <li><a href="pages/offers.html">Today's Offers</a></li>
+        <li><a href="pages/gallery.html">Gallery</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="#demo">About Us</a></li>
+        <li><a href="#demo">Careers</a></li>
+        <li><a href="#demo">Franchise</a></li>
+        <li><a href="#demo">Press</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2024 BrewHaus Café. All rights reserved.</p>
+    <p>Made with ❤️ for food lovers.</p>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

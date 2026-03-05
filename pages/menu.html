@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Menu — BrewHaus Café</title>
+  <meta name="description" content="Explore BrewHaus full menu — gourmet burgers, creamy pastas, Tex-Mex, specialty coffees and desserts." />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>☕</text></svg>" />
+  <style>
+    .menu-cat-section { margin-top: 3.5rem; }
+    .menu-cat-header { display: flex; align-items: center; gap: 1rem; margin-bottom: 2rem; padding-bottom: 1rem; border-bottom: 2px solid var(--border); }
+    .cat-emoji { font-size: 2rem; }
+    .cat-title { font-family: var(--font-h); font-size: 1.6rem; font-weight: 800; }
+    .cat-count { font-size: 0.82rem; color: var(--muted); background: var(--cream); padding: 0.25rem 0.75rem; border-radius: 50px; border: 1px solid var(--border); }
+    .menu-section-bg { background: #fff; }
+  </style>
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+  <a href="../index.html" class="nav-logo">Brew<span>Haus</span></a>
+  <ul class="nav-links">
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="menu.html" class="active">Menu</a></li>
+    <li><a href="gallery.html">Gallery</a></li>
+    <li><a href="offers.html">Offers</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="menu.html" class="btn-order">Order Now</a></li>
+  </ul>
+  <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+</nav>
+
+<!-- Page Hero -->
+<div class="page-hero">
+  <span class="section-label">Full Menu</span>
+  <h1 class="section-title" style="margin-bottom:0.75rem;">What Will You Have Today?</h1>
+  <p class="section-sub">48 dishes crafted fresh daily. Filter by category or scroll through everything.</p>
+</div>
+
+<!-- Sticky Category Tabs -->
+<div style="background:#fff;border-bottom:1px solid var(--border);position:sticky;top:72px;z-index:50;padding:1rem 5%;">
+  <div class="cat-tabs" style="margin:0;overflow-x:auto;flex-wrap:nowrap;padding-bottom:2px;">
+    <button class="cat-tab active" data-cat="all">All Items</button>
+    <button class="cat-tab" data-cat="burger">🍔 Burgers</button>
+    <button class="cat-tab" data-cat="pasta">🍝 Pasta</button>
+    <button class="cat-tab" data-cat="texmex">🌮 Tex-Mex</button>
+    <button class="cat-tab" data-cat="drinks">☕ Drinks</button>
+    <button class="cat-tab" data-cat="dessert">🍫 Desserts</button>
+    <button class="cat-tab" data-cat="starters">🧆 Starters</button>
+  </div>
+</div>
+
+<section class="section menu-section-bg">
+
+  <!-- BURGERS -->
+  <div class="menu-cat-section reveal">
+    <div class="menu-cat-header">
+      <span class="cat-emoji">🍔</span>
+      <div class="cat-title">Burgers</div>
+      <span class="cat-count">8 items</span>
+    </div>
+    <div class="menu-grid">
+      <div class="menu-card" data-cat="burger">
+        <div class="card-img"><img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=500&q=80" alt="Cheese Burst Burger" loading="lazy"/><span class="card-badge">🔥 Bestseller</span></div>
+        <div class="card-body"><div class="card-name">Cheese Burst Burger</div><div class="card-desc">Crispy chicken, oozing cheddar, smoky BBQ sauce on brioche bun.</div><div class="card-footer"><span class="card-price">₹249</span><button class="card-add">+</button></div></div>
+      </div>
+      <div class="menu-card" data-cat="burger">
+        <div class="card-img"><img src="https://images.unsplash.com/photo-1550547660-d9450f859349?w=500&q=80" alt="Veg Supreme" loading="lazy"/><span class="card-badge veg">🌿 Veg</span></div>
+        <div class="card-body"><div class="card-name">Veg Supreme Burger</div><div class="card-desc">Crunchy veg patty, jalapeño mayo, fresh lettuce, double cheese.</div><div class="card-footer"><span class="card-price">₹199</span><button class="card-add">+</button></div></div>
+      </div>
+      <div class="menu-card" data-cat="burger">
+        <div class="card-img"><img src="https://images.unsplash.com/photo-1586190848861-99aa4a171e90?w=500&q=80" alt="Classic Chicken" loading="lazy"/></div>
+        <div class="card-body"><div class="card-name">Classic Chicken Burger</div><div class="card-desc">Grilled chicken thigh, coleslaw, pickles, house mustard sauce.</div><div class="card-footer"><span class="card-price">₹219</span><button class="card-add">+</button></div></div>
+      </div>
+      <div class="menu-card" data-cat="burger">
+        <div class="card-img"><img src="https://images.unsplash.com/photo-1553979459-d2229ba7433b?w=500&q=80" alt="Spicy Sriracha" loading="lazy"/><span class="card-badge">🌶️ Spicy</span></div>
+        <div class="card-body"><div class="card-name">Spicy Sriracha Burger</div><div class="card-desc">Double chicken patty, sriracha aioli, pepper jack cheese, caramelised onions.</div><div class="card-footer"><span class="card-price">₹279</span><button class="card-add">+</button></div></div>
+      </div>
+      <div class="menu-card" data-cat="burger">
+        <div class="card-img"><img src="https://images.unsplash.com/photo-1561758033-d89a9ad46330?w=500&q=80" alt="Mushroom Melt" loading="lazy"/><span class="card-badge veg">🌿 Veg</span></div>
+        <div class="card-body"><div class="card-name">Mushroom Melt Burger</div><div class="card-desc">Sautéed portobello mushrooms, Swiss cheese, truffle mayo on sesame bun.</div><div class="card-footer"><span class="card-price">₹229</span><button class="card-add">+</button></div></div>
+      </div>
+      <div class="menu-card" data-cat="burger">
+        <div class="card-img"><img src="https://images.unsplash.com/photo-1571091718767-18b5b1457add?w=500&q=80" alt="The Monster" loading="lazy"/><span class="card-badge">💪 XL</span></div>
+        <div class="card-body"><div class="card-name">The Monster Burger</div><div class="card-desc">Triple patty, triple cheese, bacon, fried egg, lettuce, tomato, BBQ.</div><div class="card-footer"><span class="card-price">₹449</span><button class="card-add">+</button></div></div>
+      </div>
+      <div class="menu-card" data-cat="burger">
+        <div class="card-img"><img src="https://images.unsplash.com/photo-1620360289523-8a80c0f80e04?w=500&q=80" alt="Paneer Tikka Burger" loading="lazy"/><span class="card-badge veg">🌿 Veg</span></div>
+        <div class="card-body"><div class="card-name">Paneer Tikka Burger</div><div class="card-desc">Charred paneer tikka, mint chutney, crispy onion strings, whole wheat bun.</div><div class="card-footer"><span class="card-price">₹239</span><button class="card-add">+</button></div></div>
+      </div>
+      <div class="menu-card" data-cat="burger">
+        <div class="card-img"><img src="https://images.unsplash.com/photo-1603064752734-4c48eff4d821?w=500&q=80" alt="BBQ Smokehouse" loading="lazy"/></div>
+        <div class="card-body"><div class="card-name">BBQ Smokehouse Burger</div><div class="card-desc">Pulled chicken, smoky BBQ sauce, crispy onion rings, brioche.</div><div class="card-footer"><span class="card-price">₹269</span><button class="card-add">+</button></div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PASTA -->
+  <div class="menu-cat-section reveal">
+    <div class="menu-cat-header">
+      <span class="cat-emoji">🍝</span>
+      <div class="cat-title">Pasta</div>
+      <span class="cat-count">6 items</span>
+    </div>
+    <div class="menu-grid">
+      <div class="menu-card" data-cat="pasta">
+        <div class="card-img"><img src="https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?w=500&q=80" alt="Rose Pasta" loading="lazy"/><span class="card-badge veg">🌿 Veg</span></div>
+        <div class="card-body"><div class="card-name">Creamy Rose Pasta</div><div class="card-desc">Penne in velvety tomato-cream sauce, fresh basil, parmesan.</div><div class="card-footer"><span class="card-price">₹219</span><button class="card-add">+</button></div></div>
+      </div>
+      <div class="menu-card" data-cat="pasta">
+        <div class="card-img"><img src="https://images.unsplash.com/photo-1555949258-eb67b1ef0ceb?w=500&q=80" alt="Chicken Alfredo" loading="lazy"/></div>
+        <div class="card-body"><div class="card-name">Chicken Alfredo</div><div class="card-desc">Grilled chicken in rich Alfredo sauce, fettuccine, garlic bread.</div><div class="card-footer"><span class="card-price">₹279</span><button class="card-add">+</button></div></div>
+      </div>
+      <div class="menu-card" data-cat="pasta">
+        <div class="card-img"><img src="https://images.unsplash.com/photo-1640135534218-1e1a6d4cbec2?w=500&q=80" alt="Arrabiata" loading="lazy"/><span class="card-badge">🌶️ Spicy</span></div>
+        <div class="card-body"><div class="card-name">Spicy Arrabiata</div><div class="card-desc">Rigatoni in fiery tomato-garlic sauce, chilli flakes, fresh herbs.</div><div class="card-footer"><span class="card-price">₹199</span><button class="card-add">+</button></div></div>
+      </div>
+      <div class="menu-card" data-cat="pasta">
+        <div class="card-img"><img src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?w=500&q=80" alt="White Sauce" loading="lazy"/><span class="card-badge veg">🌿 Veg</span></div>
+        <div class="card-body"><div class="card-name">White Sauce Pasta</div><div class="card-desc">Creamy béchamel, sautéed mushrooms, sweet corn, penne, herb crust.</div><div class="card-footer"><span class="card-price">₹209</span><button class="card-add">+</button></div></div>
+      </div>
+      <div class="menu-card" data-cat="pasta">
+        <div class="card-img"><img src="https://images.unsplash.com/photo-1473093226555-0af0a4a3a2f3?w=500&q=80" alt="Pesto Pasta" loading="lazy"/><span class="card-badge veg">🌿 Veg</span></div>
+        <div class="card-body"><div class="card-name">Basil Pesto Pasta</div><div class="card-desc">Handmade pesto, roasted cherry tomatoes, pine nuts, cold-pressed olive oil.</div><div class="card-footer"><span class="card-price">₹239</span><button class="card-add">+</button></div></div>
+      </div>
+      <div class="menu-card" data-cat="pasta">
+        <div class="card-img"><img src="https://images.unsplash.com/photo-1484980972926-edee96e0960d?w=500&q=80" alt="Aglio Olio" loading="lazy"/></div>
+        <div class="card-body"><div class="card-name">Chicken Aglio e Olio</div><div class="card-desc">Spaghetti with garlic, chilli, olive oil and juicy pan-seared chicken.</div><div class="card-footer"><span class="card-price">₹259</span><button class="card-add">+</button></div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TEX-MEX -->
+  <div class="menu-cat-section reveal">
+    <div class="menu-cat-header">
+      <span class="cat-emoji">🌮</span>
+      <div class="cat-title">Tex-Mex</div>
+      <span class="cat-count">5 items</span>
+    </div>
+    <div class="menu-grid">
+      <div class="menu-card" data-cat="texmex">
+        <div class="card-img"><img src="https://images.unsplash.com/photo-1565299507177-b0ac66763828?w=500&q=80" alt="Nachos" loading="lazy"/><span class="card-badge veg">🌿 Veg</span></div>
+        <div class="card-body"><div class="card-name">Loaded Nachos</div><div class="card-desc">Tortilla chips, nacho cheese, jalapeños, sour cream, pico de gallo.</div><div class="card-footer"><span class="card-price">₹199</span><button class="card-add">+</button></div></div>
+      </div>
+      <div class="menu-card" data-cat="texmex">
+        <div class="card-img"><img src="https://images.unsplash.com/photo-1565299585323-38d6b0865b47?w=500&q=80" alt="Tacos" loading="lazy"/></div>
+        <div class="card-body"><div class="card-name">Crispy Chicken Tacos</div><div class="card-desc">Soft flour tacos, chipotle chicken, avocado, pico de gallo, lime crema.</div><div class="card-footer"><span class="card-price">₹229</span><button class="card-add">+</button></div></div>
+      </div>
+      <div class="menu-card" data-cat="texmex">
+        <div class="card-img"><img src="https://images.unsplash.com/photo-1618040996337-56904b7850b9?w=500&q=80" alt="Quesadilla" loading="lazy"/><span class="card-badge veg">🌿 Veg</span></div>
+        <div class="card-body"><div class="card-name">Cheese Quesadilla</div><div class="card-desc">Crispy flour tortilla stuffed with melted mozzarella and mild pico.</div><div class="card-footer"><span class="card-price">₹179</span><button class="card-add">+</button></div></div>
+      </div>
+      <div class="menu-card" data-cat="texmex">
+        <div class="card-img"><img src="https://images.unsplash.com/photo-1551504734-5ee1c4a1479b?w=500&q=80" alt="Burrito" loading="lazy"/></div>
+        <div class="card-body"><div class="card-name">Chicken Burrito Bowl</div><div class="card-desc">Cilantro rice, spiced chicken, beans, corn, guacamole, chipotle sauce.</div><div class="card-footer"><span class="card-price">₹269</span><button class="card-add">+</button></div></div>
+      </div>
+      <div class="menu-card" data-cat="texmex">
+        <div class="card-img"><img src="https://images.unsplash.com/photo-1552332386-f8dd00dc2f85?w=500&q=80" alt="Tortilla Wrap" loading="lazy"/></div>
+        <div class="card-body"><div class="card-name">BBQ Chicken Wrap</div><div class="card-desc">Chargrilled chicken, smoky BBQ, crispy lettuce, cheddar in a toasted wrap.</div><div class="card-footer"><span class="card-price">₹219</span><button class="card-add">+</button></div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DRINKS -->
+  <div class="menu-cat-section reveal">
+    <div class="menu-cat-header">
+      <span class="cat-emoji">☕</span>
+      <div class="cat-title">Coffee & Drinks</div>
+      <span class="cat-count">8 items</span>
+    </div>
+    <div class="menu-grid">
+      <div class="menu-card" data-cat="drinks">
+        <div class="card-img"><img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=500&q=80" alt="Cold Brew" loading="lazy"/></div>
+        <div class="card-body"><div class="card-name">Signature Cold Brew</div><div class="card-desc">12-hour single-origin cold brew with salted caramel foam. Iced.</div><div class="card-footer"><span class="card-price">₹179</span><button class="card-add">+</button></div></div>
+      </div>
+      <div class="menu-card" data-cat="drinks">
+        <div class="card-img"><img src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?w=500&q=80" alt="Mocha Frappe" loading="lazy"/></div>
+        <div class="card-body"><div class="card-name">Dark Mocha Frappe</div><div class="card-desc">Blended espresso, dark chocolate, whipped cream, cocoa dust.</div><div class="card-footer"><span class="card-price">₹189</span><button class="card-add">+</button></div></div>
+      </div>
+      <div class="menu-card" data-cat="drinks">
+        <div class="card-img"><img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=500&q=80" alt="Cappuccino" loading="lazy"/></div>
+        <div class="card-body"><div class="card-name">Classic Cappuccino</div><div class="card-desc">Double espresso, velvety steamed milk, delicate foam art.</div><div class="card-footer"><span class="card-price">₹149</span><button class="card-add">+</button></div></div>
+      </div>
+      <div class="menu-card" data-cat="drinks">
+        <div class="card-img"><img src="https://images.unsplash.com/photo-1541167760496-1628856ab772?w=500&q=80" alt="Matcha Latte" loading="lazy"/></div>
+        <div class="card-body"><div class="card-name">Iced Matcha Latte</div><div class="card-desc">Ceremonial grade matcha, oat milk, honey, over ice. Earthy and refreshing.</div><div class="card-footer"><span class="card-price">₹179</span><button class="card-add">+</button></div></div>
+      </div>
+      <div class="menu-card" data-cat="drinks">
+        <div class="card-img"><img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=500&q=80" alt="Flat White" loading="lazy"/></div>
+        <div class="card-body"><div class="card-name">Flat White</div><div class="card-desc">Ristretto shots topped with microfoam. Strong, smooth, perfect ratio.</div><div class="card-footer"><span class="card-price">₹169</span><button class="card-add">+</button></div></div>
+      </div>
+      <div class="menu-card" data-cat="drinks">
+        <div class="card-img"><img src="https://images.unsplash.com/photo-1570197788417-0e82375c9371?w=500&q=80" alt="Mango Cooler" loading="lazy"/></div>
+        <div class="card-body"><div class="card-name">Mango Mint Cooler</div><div class="card-desc">Fresh alphonso mango, mint, lime juice, soda. Summer in a glass.</div><div class="card-footer"><span class="card-price">₹159</span><button class="card-add">+</button></div></div>
+      </div>
+      <div class="menu-card" data-cat="drinks">
+        <div class="card-img"><img src="https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=500&q=80" alt="Smoothie" loading="lazy"/></div>
+        <div class="card-body"><div class="card-name">Berry Blast Smoothie</div><div class="card-desc">Blueberry, strawberry, raspberry, banana, almond milk, chia seeds.</div><div class="card-footer"><span class="card-price">₹199</span><button class="card-add">+</button></div></div>
+      </div>
+      <div class="menu-card" data-cat="drinks">
+        <div class="card-img"><img src="https://images.unsplash.com/photo-1603033156166-2ae22eb2b7e2?w=500&q=80" alt="Hot Chocolate" loading="lazy"/></div>
+        <div class="card-body"><div class="card-name">Belgian Hot Chocolate</div><div class="card-desc">Rich 70% dark Belgian chocolate melted into steamed whole milk.</div><div class="card-footer"><span class="card-price">₹169</span><button class="card-add">+</button></div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DESSERTS -->
+  <div class="menu-cat-section reveal">
+    <div class="menu-cat-header">
+      <span class="cat-emoji">🍫</span>
+      <div class="cat-title">Desserts</div>
+      <span class="cat-count">5 items</span>
+    </div>
+    <div class="menu-grid">
+      <div class="menu-card" data-cat="dessert">
+        <div class="card-img"><img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?w=500&q=80" alt="Brownie" loading="lazy"/><span class="card-badge">🔥 Bestseller</span></div>
+        <div class="card-body"><div class="card-name">Warm Chocolate Brownie</div><div class="card-desc">Dense fudgy brownie served warm with vanilla ice cream and caramel drizzle.</div><div class="card-footer"><span class="card-price">₹169</span><button class="card-add">+</button></div></div>
+      </div>
+      <div class="menu-card" data-cat="dessert">
+        <div class="card-img"><img src="https://images.unsplash.com/photo-1567171466295-4afa63d45416?w=500&q=80" alt="Waffles" loading="lazy"/></div>
+        <div class="card-body"><div class="card-name">Belgian Waffles</div><div class="card-desc">Crispy golden waffles, fresh strawberries, Nutella, whipped cream.</div><div class="card-footer"><span class="card-price">₹189</span><button class="card-add">+</button></div></div>
+      </div>
+      <div class="menu-card" data-cat="dessert">
+        <div class="card-img"><img src="https://images.unsplash.com/photo-1533134242443-d4fd215305ad?w=500&q=80" alt="Cheesecake" loading="lazy"/></div>
+        <div class="card-body"><div class="card-name">New York Cheesecake</div><div class="card-desc">Classic baked cheesecake with a buttery graham cracker base, berry coulis.</div><div class="card-footer"><span class="card-price">₹199</span><button class="card-add">+</button></div></div>
+      </div>
+      <div class="menu-card" data-cat="dessert">
+        <div class="card-img"><img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=500&q=80" alt="Tiramisu" loading="lazy"/></div>
+        <div class="card-body"><div class="card-name">Tiramisu</div><div class="card-desc">Classic Italian dessert with espresso-soaked ladyfingers and mascarpone.</div><div class="card-footer"><span class="card-price">₹219</span><button class="card-add">+</button></div></div>
+      </div>
+      <div class="menu-card" data-cat="dessert">
+        <div class="card-img"><img src="https://images.unsplash.com/photo-1576618148400-f54bed99fcfd?w=500&q=80" alt="Churros" loading="lazy"/></div>
+        <div class="card-body"><div class="card-name">Cinnamon Churros</div><div class="card-desc">Crispy fried dough with cinnamon sugar, dark chocolate dipping sauce.</div><div class="card-footer"><span class="card-price">₹149</span><button class="card-add">+</button></div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- STARTERS -->
+  <div class="menu-cat-section reveal">
+    <div class="menu-cat-header">
+      <span class="cat-emoji">🧆</span>
+      <div class="cat-title">Starters & Sides</div>
+      <span class="cat-count">6 items</span>
+    </div>
+    <div class="menu-grid">
+      <div class="menu-card" data-cat="starters">
+        <div class="card-img"><img src="https://images.unsplash.com/photo-1630384060421-cb20d0e0649d?w=500&q=80" alt="Fries" loading="lazy"/><span class="card-badge veg">🌿 Veg</span></div>
+        <div class="card-body"><div class="card-name">Loaded Cheese Fries</div><div class="card-desc">Thick-cut fries under a blanket of nacho cheese, jalapeños, chives.</div><div class="card-footer"><span class="card-price">₹149</span><button class="card-add">+</button></div></div>
+      </div>
+      <div class="menu-card" data-cat="starters">
+        <div class="card-img"><img src="https://images.unsplash.com/photo-1527477396000-e27163b481c2?w=500&q=80" alt="Onion Rings" loading="lazy"/><span class="card-badge veg">🌿 Veg</span></div>
+        <div class="card-body"><div class="card-name">Beer-Battered Onion Rings</div><div class="card-desc">Crispy rings served with smoky sriracha dip and ranch.</div><div class="card-footer"><span class="card-price">₹129</span><button class="card-add">+</button></div></div>
+      </div>
+      <div class="menu-card" data-cat="starters">
+        <div class="card-img"><img src="https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?w=500&q=80" alt="Wings" loading="lazy"/></div>
+        <div class="card-body"><div class="card-name">Peri Peri Chicken Wings</div><div class="card-desc">6 crispy wings tossed in Peri Peri sauce, served with blue cheese dip.</div><div class="card-footer"><span class="card-price">₹219</span><button class="card-add">+</button></div></div>
+      </div>
+      <div class="menu-card" data-cat="starters">
+        <div class="card-img"><img src="https://images.unsplash.com/photo-1586190848861-99aa4a171e90?w=500&q=80" alt="Garlic Bread" loading="lazy"/><span class="card-badge veg">🌿 Veg</span></div>
+        <div class="card-body"><div class="card-name">Cheesy Garlic Bread</div><div class="card-desc">Toasted sourdough with herb garlic butter, mozzarella, marinara dip.</div><div class="card-footer"><span class="card-price">₹119</span><button class="card-add">+</button></div></div>
+      </div>
+      <div class="menu-card" data-cat="starters">
+        <div class="card-img"><img src="https://images.unsplash.com/photo-1575450314881-e8b2cf7f4a75?w=500&q=80" alt="Mozzarella Sticks" loading="lazy"/><span class="card-badge veg">🌿 Veg</span></div>
+        <div class="card-body"><div class="card-name">Mozzarella Sticks</div><div class="card-desc">Golden-fried cheese sticks with marinara sauce, crispy outside, gooey inside.</div><div class="card-footer"><span class="card-price">₹159</span><button class="card-add">+</button></div></div>
+      </div>
+      <div class="menu-card" data-cat="starters">
+        <div class="card-img"><img src="https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?w=500&q=80" alt="Soup" loading="lazy"/><span class="card-badge veg">🌿 Veg</span></div>
+        <div class="card-body"><div class="card-name">Tomato Basil Soup</div><div class="card-desc">Velvety roasted tomato soup, fresh basil oil, crusty croutons, cream swirl.</div><div class="card-footer"><span class="card-price">₹139</span><button class="card-add">+</button></div></div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<!-- BUILD YOUR BURGER CTA -->
+<section class="section" style="background:var(--cream);text-align:center;padding:60px 5%;">
+  <div class="reveal">
+    <span class="section-label">Interactive</span>
+    <h2 class="section-title">Build Your Own Burger</h2>
+    <p class="section-sub" style="margin:0.75rem auto 2rem;">Choose every layer. Create your dream burger and we'll make it exactly as you want.</p>
+    <a href="builder.html" class="btn-primary">🍔 Start Building →</a>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="../index.html" class="nav-logo">Brew<span style="color:#fff">Haus</span></a>
+      <p>Your neighbourhood urban café. Fresh food, specialty coffee, good vibes.</p>
+      <div class="footer-social">
+        <div class="social-btn">📸</div><div class="social-btn">📘</div><div class="social-btn">🐦</div>
+      </div>
+    </div>
+    <div class="footer-col"><h4>Menu</h4><ul><li><a href="#">Burgers</a></li><li><a href="#">Pasta</a></li><li><a href="#">Tex-Mex</a></li><li><a href="#">Coffee</a></li><li><a href="#">Desserts</a></li></ul></div>
+    <div class="footer-col"><h4>Visit</h4><ul><li><a href="contact.html">Locations</a></li><li><a href="contact.html">Book a Table</a></li><li><a href="offers.html">Offers</a></li><li><a href="gallery.html">Gallery</a></li></ul></div>
+    <div class="footer-col"><h4>Company</h4><ul>
+        <li><a href="#demo">About Us</a></li>
+        <li><a href="#demo">Careers</a></li>
+        <li><a href="#demo">Franchise</a></li>
+        <li><a href="#demo">Privacy Policy</a></li></ul></div>
+  </div>
+  <div class="footer-bottom">
+    <p> 2024 BrewHaus Café. All rights reserved.</p>
+    <p>Made with for food lovers.</p>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>

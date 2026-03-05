@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Build Your Burger — BrewHaus Café</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍔</text></svg>" />
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+  <a href="../index.html" class="nav-logo">Brew<span>Haus</span></a>
+  <ul class="nav-links">
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="menu.html">Menu</a></li>
+    <li><a href="gallery.html">Gallery</a></li>
+    <li><a href="offers.html">Offers</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="menu.html" class="btn-order">Order Now</a></li>
+  </ul>
+  <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+</nav>
+
+<div class="page-hero">
+  <span class="section-label">Interactive Builder</span>
+  <h1 class="section-title">Build Your Dream Burger</h1>
+  <p class="section-sub">Pick every layer. See your creation come to life. Price updates as you build.</p>
+</div>
+
+<section class="section" style="background:#fff;">
+  <div class="builder-wrap">
+    <!-- Options -->
+    <div class="builder-options">
+
+      <div class="builder-group reveal">
+        <h3>1. Choose Your Bun</h3>
+        <div class="builder-choices">
+          <button class="builder-choice selected" data-group="bun">Sesame Bun</button>
+          <button class="builder-choice" data-group="bun">Brioche Bun <span style="color:var(--muted);font-size:0.78rem">+₹20</span></button>
+          <button class="builder-choice" data-group="bun">Whole Wheat <span style="color:var(--muted);font-size:0.78rem">+₹10</span></button>
+          <button class="builder-choice" data-group="bun">Pita Wrap <span style="color:var(--muted);font-size:0.78rem">+₹15</span></button>
+        </div>
+      </div>
+
+      <div class="builder-group reveal">
+        <h3>2. Choose Your Patty</h3>
+        <div class="builder-choices">
+          <button class="builder-choice selected" data-group="patty">Chicken Patty</button>
+          <button class="builder-choice" data-group="patty">Beef Patty <span style="color:var(--muted);font-size:0.78rem">+₹30</span></button>
+          <button class="builder-choice" data-group="patty">Veg Patty</button>
+          <button class="builder-choice" data-group="patty">Paneer Patty <span style="color:var(--muted);font-size:0.78rem">+₹20</span></button>
+          <button class="builder-choice" data-group="patty">Double Patty <span style="color:var(--muted);font-size:0.78rem">+₹60</span></button>
+        </div>
+      </div>
+
+      <div class="builder-group reveal">
+        <h3>3. Choose Your Cheese</h3>
+        <div class="builder-choices">
+          <button class="builder-choice selected" data-group="cheese">No Cheese</button>
+          <button class="builder-choice" data-group="cheese">Cheddar <span style="color:var(--muted);font-size:0.78rem">+₹20</span></button>
+          <button class="builder-choice" data-group="cheese">Mozzarella <span style="color:var(--muted);font-size:0.78rem">+₹20</span></button>
+          <button class="builder-choice" data-group="cheese">Pepper Jack <span style="color:var(--muted);font-size:0.78rem">+₹25</span></button>
+          <button class="builder-choice" data-group="cheese">Double Cheese <span style="color:var(--muted);font-size:0.78rem">+₹40</span></button>
+        </div>
+      </div>
+
+      <div class="builder-group reveal">
+        <h3>4. Choose Your Sauce</h3>
+        <div class="builder-choices">
+          <button class="builder-choice selected" data-group="sauce">Ketchup</button>
+          <button class="builder-choice" data-group="sauce">BBQ</button>
+          <button class="builder-choice" data-group="sauce">Chipotle <span style="color:var(--muted);font-size:0.78rem">+₹10</span></button>
+          <button class="builder-choice" data-group="sauce">Sriracha Mayo <span style="color:var(--muted);font-size:0.78rem">+₹10</span></button>
+          <button class="builder-choice" data-group="sauce">Garlic Aioli <span style="color:var(--muted);font-size:0.78rem">+₹10</span></button>
+        </div>
+      </div>
+
+      <div class="builder-group reveal">
+        <h3>5. Add Extras (Optional)</h3>
+        <div class="builder-choices">
+          <button class="builder-choice extra-toggle" data-extra="Lettuce & Tomato">Lettuce & Tomato</button>
+          <button class="builder-choice extra-toggle" data-extra="Caramelised Onions +₹15">Caramelised Onions</button>
+          <button class="builder-choice extra-toggle" data-extra="Fried Egg +₹20">Fried Egg</button>
+          <button class="builder-choice extra-toggle" data-extra="Bacon +₹40">Bacon Strips</button>
+          <button class="builder-choice extra-toggle" data-extra="Avocado +₹30">Avocado</button>
+          <button class="builder-choice extra-toggle" data-extra="Pickled Jalapeños">Pickled Jalapeños</button>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Preview -->
+    <div class="burger-preview reveal">
+      <div class="burger-visual" id="burgerVisual">🍔</div>
+      <div class="burger-name" id="burgerName">Chicken Burger</div>
+      <div class="burger-ingredients" id="burgerIngredients">Sesame Bun · Chicken Patty · No Cheese · Ketchup</div>
+      <div class="burger-price" id="burgerPrice">₹149</div>
+      <button class="btn-primary" style="width:100%;justify-content:center;" onclick="addBuilderToCart()">
+        🛒 Add to Cart
+      </button>
+      <p style="font-size:0.8rem;color:var(--muted);margin-top:1rem;line-height:1.6;">
+        📍 Available at all BrewHaus outlets<br>⏱ Ready in 12–15 minutes
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="background:var(--cream);text-align:center;padding:60px 5%;">
+  <div class="reveal">
+    <span class="section-label">Explore More</span>
+    <h2 class="section-title">Not a Burger Person?</h2>
+    <p class="section-sub" style="margin:0.75rem auto 2rem;">Check out our full menu — pasta, Tex-Mex, coffees, desserts and more.</p>
+    <a href="menu.html" class="btn-primary">View Full Menu →</a>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="../index.html" class="nav-logo">Brew<span style="color:#fff">Haus</span></a>
+      <p>Your neighbourhood urban café. Fresh food, specialty coffee, good vibes.</p>
+    </div>
+    <div class="footer-col"><h4>Menu</h4><ul><li><a href="menu.html">Burgers</a></li><li><a href="menu.html">Pasta</a></li><li><a href="menu.html">Coffee</a></li></ul></div>
+    <div class="footer-col"><h4>Visit</h4><ul><li><a href="contact.html">Locations</a></li><li><a href="contact.html">Book a Table</a></li></ul></div>
+    <div class="footer-col"><h4>Company</h4><ul><li><a href="#demo">About Us</a></li><li><a href="#demo">Careers</a></li></ul></div>
+  </div>
+  <div class="footer-bottom">
+    <p> 2024 BrewHaus Café.</p>
+    <p>Made with </p>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+<script>
+// Extra toggle logic
+document.querySelectorAll('.extra-toggle').forEach(btn => {
+  btn.addEventListener('click', () => {
+    btn.classList.toggle('selected');
+    updateExtras();
+  });
+});
+
+function updateExtras() {
+  const extraPrices = { 'Caramelised Onions +₹15': 15, 'Fried Egg +₹20': 20, 'Bacon +₹40': 40, 'Avocado +₹30': 30 };
+  let extra = 0;
+  document.querySelectorAll('.extra-toggle.selected').forEach(btn => {
+    extra += extraPrices[btn.dataset.extra] || 0;
+  });
+  window._extraPrice = extra;
+  // Trigger burger update
+  if (typeof updateBurger === 'function') updateBurger();
+}
+
+function addBuilderToCart() {
+  const name = document.getElementById('burgerName').textContent;
+  const price = document.getElementById('burgerPrice').textContent;
+  let toast = document.getElementById('toast');
+  if (!toast) { toast = document.createElement('div'); toast.id = 'toast'; toast.className = 'toast'; document.body.appendChild(toast); }
+  toast.innerHTML = `<span>✓</span> ${name} (${price}) added to cart!`;
+  toast.classList.add('show');
+  setTimeout(() => toast.classList.remove('show'), 2800);
+}
+</script>
+</body>
+</html>
